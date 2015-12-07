@@ -38,6 +38,7 @@ app.controller('MainCtrl', function($scope) {
     localStorage.items = JSON.stringify($scope.items);
     chrome.browserAction.setBadgeText ( { text: JSON.stringify($scope.items.length) } );
     $scope.needUndo = true;
+    $scope.mouseOver = !$scope.mouseOver;
   }
   $scope.hoverTrash = function() {
     $scope.mouseOver = !$scope.mouseOver;
