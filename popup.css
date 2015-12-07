@@ -1,0 +1,59 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+li {
+  list-style-position: inside;
+  cursor: pointer;
+  color: white;
+}
+li:hover {
+  color: grey;
+}
+li:active {
+  color: red;
+}
+input {
+  color: black;
+}
+body {
+  width: 400px;
+}
+.list {
+  text-align: left;
+}
+hr {
+  width: 240px;
+  border-top: 1px solid rgb(52, 52, 52);
+  margin-top: 5px;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+ol {
+  margin-top: 15px;
+}
+.footer {
+  margin-top: 50px;
+  bottom: 0;
+}
+.strike {
+  text-decoration: line-through;
+}
+img {
+  cursor: pointer;
+}
+img:hover {
+
+}
+.delete {
+  padding: 10px;
+  cursor: pointer;
+}
+#trashCan {
+  padding: 10px;
+  cursor: pointer;
+}
+a {
+  cursor: pointer;
+}

@@ -5,71 +5,11 @@
   <title>First Extension</title>
   <link rel="stylesheet" href="./bootstrap.min.css">
   <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="popup.css">
   <script src="./jquery.js" charset="utf-8"></script>
   <script src="./bootstrap.min.js" charset="utf-8"></script>
   <script src="./angular.js" charset="utf-8"></script>
   <script src="./popup.js" charset="utf-8"></script>
-  <style>
-  body {
-    background: black;
-    color: white;
-    text-align: center;
-  }
-  li {
-    list-style-position: inside;
-    cursor: pointer;
-    color: white;
-  }
-  li:hover {
-    color: grey;
-  }
-  li:active {
-    color: red;
-  }
-  input {
-    color: black;
-  }
-  body {
-    width: 400px;
-  }
-  .list {
-    text-align: left;
-  }
-  hr {
-    width: 240px;
-    border-top: 1px solid rgb(52, 52, 52);
-    margin-top: 5px;
-    margin-left: 0;
-    margin-bottom: 5px;
-  }
-  ol {
-    margin-top: 15px;
-  }
-  .footer {
-    margin-top: 50px;
-    bottom: 0;
-  }
-  .strike {
-    text-decoration: line-through;
-  }
-  img {
-    cursor: pointer;
-  }
-  img:hover {
-
-  }
-  .delete {
-    padding: 10px;
-    cursor: pointer;
-  }
-  #trashCan {
-    padding: 10px;
-    cursor: pointer;
-  }
-  a {
-    cursor: pointer;
-  }
-  </style>
 </head>
 <body ng-app="noteApp" ng-controller="MainCtrl" ng-csp>
   <div class="container">
@@ -101,13 +41,6 @@
       </div>
       <a ng-click="restoreList()" ng-if="needUndo === true">Undo Delete?</a>
     </div>
-    <!-- <div class="footer">
-      <div ng-if="items.length > 1">
-        <small ng-mouseenter="hoverTrash()" ng-if="mouseOver === false" class="delete" id="deleteQuestion">Delete All?</small>
-        <div><img ng-mouseleave="hoverTrash()" ng-if="mouseOver === true" src="delete.png" alt="Delete Icon" ng-click="deleteAll()" class="delete" id="trashCan"></div>
-      </div>
-      <a ng-click="restoreList()" ng-if="needUndo === true">Undo Delete?</a>
-    </div> -->
   </div>
 </div>
 </body>
