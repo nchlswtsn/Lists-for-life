@@ -44,12 +44,14 @@ ol {
 img {
   cursor: pointer;
 }
-img:hover {
-
-}
 .delete {
+  width: 40px;
   padding: 10px;
   cursor: pointer;
+}
+.delete:active {
+  width: 35px;
+  margin-bottom: 5px;
 }
 #trashCan {
   padding: 10px;
