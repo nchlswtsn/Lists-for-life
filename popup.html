@@ -27,7 +27,7 @@
       </form>
       <div class="col-xs-10 col-xs-offset-1 list">
         <ol>
-          <li ng-repeat="item in items track by $index" class="item animated" ng-click="strike(item)" ng-dblclick="deleteItem(item)">
+          <li title="Double click to delete individual items." ng-repeat="item in items track by $index" class="item animated" ng-click="strike(item)" ng-dblclick="deleteItem(item)">
             {{item}}
             <hr>
           </li>
@@ -39,7 +39,7 @@
         <img src="deleteClosed.png" ng-mouseenter="hoverTrash()" ng-if="mouseOver === false" class="delete" id="deleteQuestion">
         <div><img ng-mouseleave="hoverTrash()" ng-if="mouseOver === true" src="deleteOpen.png" alt="Delete Icon" ng-click="deleteAll()" class="delete" id="trashCan"></div>
       </div>
-      <a ng-click="restoreList()" ng-if="needUndo === true">Undo Delete?</a>
+      <a ng-click="restoreList()" ng-if="needUndo === true">Undo delete?</a>
     </div>
   </div>
 </div>
