@@ -49,6 +49,7 @@ app.controller('MainCtrl', function($scope) {
     localStorage.items = localStorage.backupItems;
     $scope.items = localStorage.backupItems ? JSON.parse(localStorage.backupItems): [];
     $scope.needUndo = false;
+    $scope.mouseOver = !$scope.mouseOver;    
   }
   $scope.needUndo = false;
   $scope.mouseOver = false;
