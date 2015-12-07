@@ -7,11 +7,17 @@ app.controller('MainCtrl', function($scope) {
   $scope.backupItems = localStorage.backupItems ? JSON.parse(localStorage.backupItems): [];
   $scope.addItem = function() {
     if ($scope.newItem !== undefined) {
+      if ($scope.items.length === 0 && $scope.backupItems.length !== 0) {
+        $scope.needUndo = false;
+        console.log('TIME TO GO');
+      }
       chrome.browserAction.setBadgeText ( { text: JSON.stringify($scope.items.length + 1) } );
       $scope.items.push($scope.newItem)
       localStorage.items = JSON.stringify($scope.items)
       $scope.newItem = '';
       $scope.itemCount = $scope.items.length;
+      console.log('items: ' + $scope.items.length);
+      console.log('backupItems: ' + $scope.backupItems.length);
     }
   }
   $scope.deleteItem = function(item) {
@@ -27,13 +33,22 @@ app.controller('MainCtrl', function($scope) {
     angular.element('this').toggleClass('strike');
   }
   $scope.deleteAll = function() {
+    localStorage.backupItems = JSON.stringify($scope.items);
     $scope.items = [];
     localStorage.items = JSON.stringify($scope.items);
     chrome.browserAction.setBadgeText ( { text: JSON.stringify($scope.items.length) } );
+    $scope.needUndo = true;
   }
   $scope.hoverTrash = function() {
     $scope.mouseOver = !$scope.mouseOver;
   }
+  $scope.restoreList = function() {
+    localStorage.items = localStorage.backupItems;
+    $scope.items = localStorage.backupItems ? JSON.parse(localStorage.backupItems): [];
+    $scope.needUndo = false;
+    console.log('restore');
+  }
+  $scope.needUndo = false;
   $scope.mouseOver = false;
   $scope.itemCount = $scope.items.length;
   chrome.browserAction.setBadgeText ( { text: JSON.stringify($scope.items.length) } );
