@@ -33,6 +33,7 @@ app.controller('MainCtrl', function($scope) {
     angular.element('this').toggleClass('strike');
   }
   $scope.deleteAll = function() {
+    rocketcss('.item', '.delete', 'rocketPulseHole');
     localStorage.backupItems = JSON.stringify($scope.items);
     $scope.items = [];
     localStorage.items = JSON.stringify($scope.items);
