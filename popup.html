@@ -57,13 +57,18 @@
   img:hover {
 
   }
-  .delete {
-    cursor: pointer;
+  #deleteQuestion {
     margin-bottom: 10px;
+    cursor: pointer;
   }
   #trashCan {
     padding-left: 40px;
     padding-right: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  a {
+    cursor: pointer;
   }
   </style>
 </head>
@@ -91,8 +96,11 @@
       </div>
     </div>
     <div class="footer">
-      <small ng-mouseenter="hoverTrash()" ng-if="mouseOver === false" class="delete">Delete All?</small>
-      <div><img ng-mouseleave="hoverTrash()" ng-if="mouseOver === true" src="delete.png" alt="Delete Icon" ng-click="deleteAll()" class="delete" id="trashCan"></div>
+      <div ng-if="items.length > 1">
+        <small ng-mouseenter="hoverTrash()" ng-if="mouseOver === false" class="delete" id="deleteQuestion">Delete All?</small>
+        <div><img ng-mouseleave="hoverTrash()" ng-if="mouseOver === true" src="delete.png" alt="Delete Icon" ng-click="deleteAll()" class="delete" id="trashCan"></div>
+      </div>
+      <a ng-click="restoreList()" ng-if="needUndo === true">Undo Delete?</a>
     </div>
   </div>
 </div>
