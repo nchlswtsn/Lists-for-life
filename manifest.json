@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "First Extension",
-  "description": "testing how to make an extension",
-  "version": "1.0.0",
+  "name": "Life's Leger",
+  "description": "Simple list keeping app using local storage",
+  "version": "1.8",
 
   "browser_action": {
     "default_icon": "icon.png",
