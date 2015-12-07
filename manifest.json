@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Life's Leger",
-  "description": "Simple list keeping app using local storage",
+  "description": "The easiest way to keep a track of your life and all the thoughts you have throughout the day.",
   "version": "1.8",
 
   "browser_action": {
