@@ -48,7 +48,7 @@ app.controller('MainCtrl', function($scope) {
   $scope.items = localStorage.items ? JSON.parse(localStorage.items): [];
   $scope.backupItems = localStorage.backupItems ? JSON.parse(localStorage.backupItems): [];
   $scope.addItem = function() {
-    mixpanel.track("User added an Item")
+    mixpanel.track("User added an Item");
     if ($scope.newItem !== undefined) {
       if ($scope.items.length === 0 && $scope.backupItems.length !== 0) {
         $scope.needUndo = false;
