@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "Life's Leger",
+  "name": "Lists for Life",
   "description": "The easiest way to keep track of your life and all the thoughts you have throughout the day.",
   "short_name": "The easiest way to keep track of your life and all the thoughts you have throughout the day.",
-  "version": "2.5",
+  "version": "2.7",
   "icons": {
     "16": "icon.png",
     "48": "icon48.png",

@@ -45,6 +45,10 @@ app.controller('MainCtrl', function($scope) {
   mixpanel.init("bf030da9bb30afaf373f7b11d7eac8fa");
   // END OF MIXPANEL ANALYTICS
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
   $scope.items = localStorage.items ? JSON.parse(localStorage.items): [];
   $scope.backupItems = localStorage.backupItems ? JSON.parse(localStorage.backupItems): [];
   $scope.addItem = function() {
