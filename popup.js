@@ -48,7 +48,8 @@ app.controller('MainCtrl', function($scope) {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
-
+  
+  $scope.listItem = false;
   $scope.items = localStorage.items ? JSON.parse(localStorage.items): [];
   $scope.backupItems = localStorage.backupItems ? JSON.parse(localStorage.backupItems): [];
   $scope.addItem = function() {
@@ -71,10 +72,6 @@ app.controller('MainCtrl', function($scope) {
     localStorage.items = JSON.stringify($scope.items)
     $scope.itemCount = $scope.items.length;
     $()
-  }
-  $scope.strike = function(item) {
-    console.log('strike');
-    angular.element('this').toggleClass('strike');
   }
   $scope.deleteAll = function() {
     angular.element('.item').addClass('zoomOutDown');

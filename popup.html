@@ -29,7 +29,7 @@
       <!-- LISTED ITEMS -->
       <div class="col-xs-10 col-xs-offset-1 list">
         <ol>
-          <li data-toggle="tooltip" data-placement="bottom" title="Double click to delete individual items." ng-repeat="item in items | filter:newItem track by $index" class="item animated" ng-click="strike(item)" ng-dblclick="deleteItem(item)">
+          <li data-toggle="tooltip" data-placement="bottom" title="Click to strike. Double-click to delete." ng-repeat="item in items | filter:newItem track by $index" class="item animated" ng-model="listItem" ng-class="{strike: listItem}" ng-click="listItem = !listItem" ng-dblclick="deleteItem(item)" >
             {{item}}
             <hr>
           </li>
