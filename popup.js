@@ -1,4 +1,8 @@
-'use strict';
+/* jshint node: true */
+/* jshint esversion: 6 */
+/// <reference path="./typings/tsd.d.ts" />
+"use strict";
+
 
 var app = angular.module('noteApp', []);
 
@@ -45,9 +49,13 @@ app.controller('MainCtrl', function($scope) {
   mixpanel.init("bf030da9bb30afaf373f7b11d7eac8fa");
   // END OF MIXPANEL ANALYTICS
 
+  // CUSTOM TOOLTIP
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
+  
+  
+  // Functional logic
   
   $scope.listItem = false;
   $scope.items = localStorage.items ? JSON.parse(localStorage.items): [];
