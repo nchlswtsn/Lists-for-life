@@ -1,6 +1,7 @@
 # Lists For Life
-Chrome Extension for taking simple notes and keeping lists.
-Using localStorage persistence.
+### Objective
+Create Angular/TypeScript-transpiled chrome browser extension for smart list taking, persiting in localstorage for lightest possible network footprint.
 
+### Structure
+Testing Chrome extension single level directory structure for old parsing mechanism.
 
-Charles Watson
